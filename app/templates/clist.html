@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+    <head>
+         <link rel="stylesheet" href="/static/tables.css">
+    </head>
+    <body>
+        <h2>Current course information: </h2>
+        <div class="tables">
+        <table>
+            <thead>
+            <tr>
+                <td>Course ID</td>
+                <td>Course Name</td>
+                <td>Course Code</td>
+            </tr>
+            </thead>
+
+            {% for row in rows%}
+                <tr>
+                    <td>{{row["cid"]}}</td>
+                    <td>{{row["coursename"]}}</td>
+                    <td>{{row["coursecode"]}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        </div>
+        <h2><a href="/">Go back to home page</a></h2>
+
+    </body>
+</html>

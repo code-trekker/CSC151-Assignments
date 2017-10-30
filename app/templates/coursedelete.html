@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+    <div class="form">
+         <form action="{{ url_for('coursedel') }}" method="POST">
+             <h2>Enter course ID</h2>
+             <input type="text" name="cno" required minlength="1" maxlength="2" oninvalid="this.setCustomValidity('Invalid course ID')" oninput="setCustomValidity('')"/><br><br>
+             <input type="submit" value="Delete" /><br><br>
+             <button><a href="/" style="text-decoration:none; color: inherit;">Cancel</a></button>
+         </form>
+    </div>
+    </body>
+</html>

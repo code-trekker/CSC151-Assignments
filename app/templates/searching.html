@@ -1,0 +1,17 @@
+<html>
+    <head>
+         <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+    <div class="form">
+        <form action="{{ url_for('searchrec') }}" method="POST">
+            <h2>Search Page</h2>
+            <p>Look for records by using ID number, first name, last name, course name, course code or gender</p><br>
+            Enter information here:<br>
+            <input type="text" name = "data" required minlength="2" oninvalid="this.setCustomValidity('Required field. Do not leave blank')" oninput="setCustomValidity('')"/><br><br>
+            <input type="submit" value="Search"/><br><br>
+            <button><a href="/" style="text-decoration:none; color: inherit;">Cancel</a></button>
+        </form>
+    </div>
+    </body>
+</html>

@@ -1,7 +1,6 @@
 h2 {
     color:#2B3856;
     text-align: center;
-    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
     font-size: 45px;
 }
 
@@ -16,6 +15,7 @@ li a{
 li a:hover:not(.active) {
     background-color: turquoise;
     color: white;
+    text-decoration: none;
 }
 
 
@@ -29,7 +29,7 @@ ul {
     position: fixed;
     height: 100%;
     overflow: auto;
-    font-family: Hoefler;
+
 }
 
 body {
@@ -39,7 +39,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right bottom;
-    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+
 }
 .par {
     float: left;
@@ -48,9 +48,10 @@ body {
     font-size: 25px
 }
 
-div.form {
+.form {
     display: block;
     text-align: center;
+    margin-top: 3%;
 
 }
 
@@ -64,13 +65,13 @@ form
 
 .head1{
     background-color:  #9fa9ad;
-    padding: 5px;
+    padding: 20px;
 }
 
-input:invalid {
-  border: 2px dashed red;
+p {
+    margin-top: 5%;
 }
 
-input:valid {
-  border: 2px solid  green;
+.results {
+    margin-top: 15%;
 }

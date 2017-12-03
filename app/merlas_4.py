@@ -51,12 +51,19 @@ def addrec():
 
             student = Student(id, fn, mn, ln, sex, cid)
             with sql.connect("testbase.db") as con:
-                cur = con.cursor()
-                cur.execute("INSERT INTO students (idno,firstname,middlename,lastname,sex,courseid) "
+                cur1 = con.cursor()
+                cur1.execute("SELECT * FROM courses WHERE cid = ? ", (cid,))
+                query = cur1.fetchone()
+                print query
+                if query is None:
+                    msg='Course does not exist!'
+                else:
+                    cur = con.cursor()
+                    cur.execute("INSERT INTO students (idno,firstname,middlename,lastname,sex,courseid) "
                             "VALUES (?,?,?,?,?,?)",
                             (student.id, student.fn, student.mn, student.ln, student.sex, student.cid))
-                con.commit()
-                msg = "Record added successfully!"
+                    con.commit()
+                    msg = "Record added successfully!"
         except:
             con.rollback()
             msg = "Error in adding. Try again."
@@ -283,5 +290,5 @@ def list():
     return render_template('clist.html', rows=rows)
 
 if __name__ == '__main__':
-    app.run(debug=True, use_reloader=False)
+    app.run(debug=True)
     app.static_folder = 'static'

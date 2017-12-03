@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="/static/bootstrap.min.css">
          <link rel="stylesheet" href="/static/style.css">
     </head>
     <body>
@@ -8,9 +9,9 @@
          <form action="{{ url_for('deleterec') }}" method="POST">
              <h2>Enter ID number</h2>
              ID number<br>
-             <input type="text" name="id" required minlength="9" maxlength="9" oninvalid="this.setCustomValidity('Invalid ID')" oninput="setCustomValidity('')"/><br><br>
-             <input type="submit" value="Delete" /><br><br>
-             <button><a href="/" style="text-decoration:none; color: inherit;">Cancel</a></button>
+             <input class="form-control" type="text" name="id" required minlength="9" maxlength="9" oninvalid="this.setCustomValidity('Invalid ID')" oninput="setCustomValidity('')"/><br><br>
+             <input class="btn btn-success" type="submit" value="Delete" /><br><br>
+             <input class="btn btn-primary" type="button" value="Back" onclick="window.location.href='/'">
          </form>
     </div>
     </body>

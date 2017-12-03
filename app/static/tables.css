@@ -8,9 +8,10 @@
 
 h2 {
     color:#2B3856;
-    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+
     font-size: 48px;
     text-align: center;
+    margin-top: 3%;
 }
 
 body {
@@ -20,14 +21,21 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right bottom;
-    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+
 }
 
 table {
     overflow-x: auto;
+    overflow-y: auto;
     width: 100%;
     text-align: center;
     padding: 20px;
+}
+
+tbody {
+  overflow-y: scroll;
+  height: 320px;
+  width: 100%;
 }
 
 td {
@@ -43,3 +51,4 @@ tr:hover {
 thead {
     background: #5889d8;
 }
+
